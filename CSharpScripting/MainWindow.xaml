@@ -1,0 +1,22 @@
+﻿<Window x:Class="CSharpScripting.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSharpScripting"
+        mc:Ignorable="d"
+        ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"
+        Icon="CSharpScripting.ico" Title="C# Scripting" Height="700" Width="825">
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <TextBox x:Name="txtScript" Grid.Row="0" Text="Console.WriteLine(&quot;Hello World&quot;);" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True" Margin="8,8,8,4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <GridSplitter Grid.Row="1" Height="4" Margin="7,0,7,0" HorizontalAlignment="Stretch" Background="DarkGray" />
+        <TextBox x:Name="txtConsole" Grid.Row="2" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" Margin="8,4,8,8" IsReadOnly="True" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Button x:Name="ButtonRun" Grid.Row="3" Content="Run" HorizontalAlignment="Right" Padding="12,3,12,3" Margin="0,0,10,5" Click="ButtonRun_Click" />
+    </Grid>
+</Window>
